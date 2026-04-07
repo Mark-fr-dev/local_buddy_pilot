@@ -361,7 +361,13 @@ h2 {
 }
 
 .cta-section {
-  background: #eef5e6;
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.cta-section h2,
+.cta-section p {
+  color: #ffffff;
 }
 
 .site-footer {
