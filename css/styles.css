@@ -252,7 +252,10 @@ h2 {
   min-height: 58vh;
   background:
     linear-gradient(rgba(20, 24, 28, 0.18), rgba(20, 24, 28, 0.18)),
-    linear-gradient(135deg, #dfe9d3 0%, #f4f1ea 45%, #d8e1ef 100%);
+    url('../assets/images/helpers.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
 }
