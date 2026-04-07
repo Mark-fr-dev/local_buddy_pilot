@@ -6,6 +6,7 @@
   --muted: #52606d;
   --border: #d9e2ec;
   --primary: #6c8847;
+  /* --primary: #000000   ; */
   --primary-dark: #587038;
   --secondary: #ffffff;
   --accent: #000000;
@@ -67,6 +68,14 @@ img {
   padding: 4rem 0;
 }
 
+.intro-section {
+  padding-bottom: 1.5rem;
+}
+
+.audience-section {
+  padding-top: 0.5rem;
+}
+
 .section-alt {
   background: var(--surface-alt);
 }
@@ -76,12 +85,14 @@ img {
 }
 
 .site-header {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(1px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .header-inner,
@@ -91,6 +102,7 @@ img {
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
+  flex-wrap: nowrap;
 }
 
 .brand {
@@ -98,12 +110,13 @@ img {
   align-items: center;
   gap: 0.75rem;
   font-weight: 700;
-  color: var(--text);
+  color: #000000;
+  flex-shrink: 0;
 }
 
 .brand img,
 .footer-brand img {
-  width: 64px;
+  width: 120px;
   height: auto;
   border-radius: 14px;
 }
@@ -114,7 +127,17 @@ img {
   display: flex;
   gap: 1rem;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav a {
+  color: #000000;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .grid {
@@ -132,7 +155,7 @@ img {
 
 .split-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2rem;
   align-items: center;
 }
@@ -165,7 +188,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(1.5rem, 5vw, 2.0rem);
   margin-bottom: 1rem;
 }
 
@@ -186,6 +209,7 @@ h2 {
 
 .audience-copy {
   font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text);
   max-width: 760px;
   margin: 0 auto;
@@ -201,7 +225,7 @@ h2 {
   background: var(--accent);
   color: #fff;
   padding: 0.85rem 1.2rem;
-  border-radius: 999px;
+  border-radius: 12px;
   font-weight: 700;
   border: 1px solid transparent;
 }
@@ -231,16 +255,14 @@ h2 {
 }
 
 .step-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 999px;
-  background: var(--primary);
-  color: white;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  display: none;
+}
+
+.step-number-image {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
 }
 
 .form-placeholder,
@@ -249,15 +271,16 @@ h2 {
 }
 
 .hero-banner {
-  min-height: 58vh;
+  min-height: 78vh;
+  padding-top: 5.5rem;
   background:
     linear-gradient(rgba(20, 24, 28, 0.18), rgba(20, 24, 28, 0.18)),
     url('../assets/images/helpers.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-start;
+  /* display: flex; */
+  /* align-items: flex-start; */
 }
 
 .hero-overlay {
@@ -268,29 +291,11 @@ h2 {
   padding: 2rem 0;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 0.75rem 1rem;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  font-weight: 700;
-}
-
-.hero-badge img {
-  width: 56px;
-  border-radius: 12px;
-}
+/* HERO IMAGE NOTE: the banner artwork itself contains the logo, so there is no separate hero badge/logo block */
 
 .cta-strip {
   padding-top: 2rem;
   padding-bottom: 1rem;
-}
-
-.intro-section {
-  padding-top: 2rem;
 }
 
 .image-panel {
@@ -303,18 +308,29 @@ h2 {
 
 .image-panel-paperwork {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)),
-    linear-gradient(135deg, #d8c3b0 0%, #f1e8db 35%, #c6d6c4 100%);
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+    url('../assets/images/helpers2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .image-panel-service {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-    linear-gradient(135deg, #d7e1c8 0%, #f5efe5 45%, #d7e6ef 100%);
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+    url('../assets/images/helpers3.png');
+  min-height: 500px;
+  max-width: 360px;
+  width: 100%;
+  margin-left: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .content-panel {
   padding: 1rem 0;
+  min-width: 0;
 }
 
 .how-section {
@@ -327,13 +343,13 @@ h2 {
 
 .pilot-area-banner {
   background: var(--primary);
-  color: white;
+  color: #ffffff;
   padding: 1.15rem 0;
 }
 
 .pilot-area-banner p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
 }
 
 .help-section {
@@ -366,23 +382,42 @@ h2 {
 
 @media (max-width: 900px) {
   .two-up,
-  .steps,
-  .split-section,
-  .header-inner,
   .footer-inner {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
   }
 
   .nav,
   .footer-links,
   .button-row {
     gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+  }
+
+  .help-section .content-panel p,
+  .help-section .content-panel li {
+    font-size: 0.95rem;
+  }
+
+  .help-section .content-panel h2 {
+    font-size: 1.4rem;
   }
 
   .brand img,
   .footer-brand img {
-    width: 56px;
+    width: 72px;
   }
 
   .hero-banner {
@@ -391,5 +426,19 @@ h2 {
 
   .image-panel {
     min-height: 280px;
+  }
+}
+
+@media (max-width: 700px) {
+  .split-section {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
+@media (max-width: 650px) {
+  .steps {
+    grid-template-columns: 1fr;
+    display: grid;
   }
 }
