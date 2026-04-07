@@ -3,13 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Help | Local Help Pilot</title>
+    <title>Book a Buddy | Local Buddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html">Local Help Pilot</a>
+        <a class="brand" href="index.html" aria-label="Local Buddy home">
+          <img src="assets/images/local-buddy-logo.png" alt="Local Buddy logo" />
+          <span>Local Buddy</span>
+        </a>
         <nav class="nav">
           <a href="index.html">Home</a>
           <a href="helper.html">Become a Helper</a>
@@ -20,19 +29,34 @@
 
     <main class="section">
       <div class="container narrow">
-        <p class="eyebrow">Booking form</p>
-        <h1>Book local help</h1>
+        <p class="eyebrow">Booking request</p>
+        <h1>Book a Buddy</h1>
         <p>
-          Use the button below to open the customer booking form.
+          Please complete the form below. This is a booking request, not an automatic confirmation.
+          We will contact you on LINE to confirm your booking.
+        </p>
+        <p class="small-note">
+          Please give clear and accurate details so we can review your request and match you with
+          the right helper.
         </p>
 
         <div class="card form-placeholder">
           <p><strong>Customer booking form</strong></p>
           <p>
-            This form collects contact details, timing, location, task information, and basic pilot
-            agreement details.
+            Pilot area: Hsinchu City and Zhubei only. Local Buddy is a helper service for everyday
+            practical support and not a professional service.
           </p>
           <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSczX13lvi_fi_mNbYmk_kjZ0qIz5eRAHKPhqf570fOopoNtvQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Open booking form</a>
+        </div>
+
+        <div class="card info-card">
+          <h2>Before you book</h2>
+          <ul class="clean-list">
+            <li>Bookings must be made at least 2 hours in advance</li>
+            <li>Payment is required before the session</li>
+            <li>Your booking is only finally confirmed after payment is verified</li>
+            <li>Helpers provide practical support and communication help only</li>
+          </ul>
         </div>
 
         <a class="button button-secondary" href="index.html">Back to home</a>

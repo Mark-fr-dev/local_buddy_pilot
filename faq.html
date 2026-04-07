@@ -3,17 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQ | Local Help Pilot</title>
+    <title>FAQ | Local Buddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html">Local Help Pilot</a>
+        <a class="brand" href="index.html" aria-label="Local Buddy home">
+          <img src="assets/images/local-buddy-logo.png" alt="Local Buddy logo" />
+          <span>Local Buddy</span>
+        </a>
         <nav class="nav">
           <a href="index.html">Home</a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSczX13lvi_fi_mNbYmk_kjZ0qIz5eRAHKPhqf570fOopoNtvQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Book Help</a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScD_y712JlEHSBdzH6Q42t-NEilVuz0rLtrQstn3EwrImcq0w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Helper</a>
+          <a href="book.html">Book a Buddy</a>
+          <a href="helper.html">Become a Helper</a>
         </nav>
       </div>
     </header>
@@ -23,208 +32,173 @@
         <p class="eyebrow">FAQ</p>
         <h1>Frequently Asked Questions</h1>
         <p>
-          Here are some common questions about how the service works, what helpers can help with,
-          and what is outside the scope of this early trial service.
+          Here are some common questions about how Local Buddy works, what helpers can help with,
+          and what is outside the scope of the pilot.
         </p>
 
-        <h2>About the service</h2>
+        <h2>About Local Buddy</h2>
 
         <div class="faq-list">
           <div class="card faq-item">
-            <h3>What is this service?</h3>
+            <h3>What is Local Buddy?</h3>
             <p>
-              This service connects foreigners in <strong>Hsinchu City</strong> and
-              <strong>Zhubei</strong> with local bilingual helpers for in-person support with
-              everyday tasks.
-            </p>
-            <p>
-              Examples include appointments, admin-related situations, practical errands, and phone
-              calls during a session.
+              Local Buddy is a helper service for foreigners in Taiwan who need practical support in
+              everyday situations where Chinese is a barrier.
             </p>
           </div>
 
           <div class="card faq-item">
-            <h3>What areas do you cover?</h3>
-            <p>At the moment, the service is available only in <strong>Hsinchu City</strong> and <strong>Zhubei</strong>.</p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>Is this an online or in-person service?</h3>
-            <p>
-              This is an <strong>in-person service only</strong>. The helper and client meet at a
-              specific destination to deal with the task together.
-            </p>
-            <p>
-              Phone calls may be made during the session if needed, but the service itself is based
-              on meeting in person.
-            </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>What kinds of tasks can helpers assist with?</h3>
-            <p>Helpers can assist with many everyday situations, including:</p>
+            <h3>What can helpers help with?</h3>
+            <p>Helpers can help with practical everyday situations where Chinese is a barrier, such as:</p>
             <ul class="clean-list">
-              <li>appointments</li>
-              <li>admin visits</li>
-              <li>translation support during a meeting</li>
-              <li>practical errands</li>
-              <li>phone calls during the session</li>
-              <li>general help navigating common local processes</li>
+              <li>appointments and bookings</li>
+              <li>admin and everyday services</li>
+              <li>shopping and service issues</li>
+              <li>housing and living</li>
+              <li>translation and communication support</li>
             </ul>
             <p class="top-gap">
-              If you are unsure whether your task is suitable, you can still submit a request and we
-              will review it manually.
+              Helpers support communication, ask questions, clarify information, and help you handle
+              everyday tasks more smoothly when Chinese is a barrier.
             </p>
           </div>
 
           <div class="card faq-item">
-            <h3>What kinds of tasks are not allowed?</h3>
-            <p>Helpers cannot assist with:</p>
+            <h3>What can helpers not help with?</h3>
+            <p>Helpers cannot help with things that go beyond normal support and communication, such as:</p>
             <ul class="clean-list">
-              <li>anything illegal</li>
-              <li>making decisions for the client</li>
-              <li>signing documents for the client</li>
-              <li>handling money on behalf of the client</li>
-              <li>legal advice</li>
-              <li>medical advice or medical decision-making</li>
-              <li>court appearances</li>
-              <li>police or law enforcement interactions</li>
+              <li>legal, medical, or financial advice</li>
+              <li>making decisions for you</li>
+              <li>handling your money or accounts</li>
+              <li>signing or committing you to anything</li>
+              <li>representing you in disputes or emergencies</li>
+              <li>illegal, unethical, dangerous, or physically risky tasks</li>
             </ul>
+          </div>
+
+          <div class="card faq-item">
+            <h3>Where does the pilot operate?</h3>
+            <p>For the pilot phase, Local Buddy is available in <strong>Hsinchu City</strong> and <strong>Zhubei</strong> only.</p>
           </div>
         </div>
 
-        <h2>Bookings and pricing</h2>
+        <h2>Booking and payment</h2>
 
         <div class="faq-list">
           <div class="card faq-item">
-            <h3>How long is a session?</h3>
-            <p>The base session length is <strong>1 hour</strong>.</p>
-            <p>
-              If both the client and the helper agree, the session may be extended in
-              <strong>30-minute increments</strong>.
-            </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>How much does it cost?</h3>
-            <p>The current trial pricing is:</p>
+            <h3>How does booking work?</h3>
+            <p>Booking works in a few simple steps:</p>
             <ul class="clean-list">
-              <li><strong>NT$400 for the first hour</strong></li>
-              <li><strong>NT$200 for each additional 30 minutes</strong>, if both sides agree to continue</li>
+              <li>Send your booking request through the form</li>
+              <li>We review your request and check that it fits the pilot</li>
+              <li>We find a suitable helper and contact you on LINE</li>
+              <li>Your booking is only finally confirmed after payment has been verified</li>
             </ul>
-            <p class="top-gap">All requests are reviewed manually before confirmation.</p>
           </div>
 
           <div class="card faq-item">
-            <h3>How do I book a helper?</h3>
-            <p>You can submit a request through the booking form on the website.</p>
-            <p>
-              During this early trial, requests are reviewed manually before they are confirmed.
-            </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>Can I make a same-day booking?</h3>
-            <p>
-              No. During this early trial, short-notice bookings are not available. Please give us
-              enough time to review and arrange your request.
-            </p>
+            <h3>How much notice is needed?</h3>
+            <p>All bookings must be made at least <strong>2 hours in advance</strong>.</p>
           </div>
 
           <div class="card faq-item">
             <h3>How does payment work?</h3>
             <p>
-              Payment details will be confirmed as part of the booking process during this early
-              trial.
+              The pilot uses <strong>bank transfer</strong>. Payment is required before the session,
+              and your booking is only finally confirmed after payment has been verified.
             </p>
           </div>
 
           <div class="card faq-item">
-            <h3>What happens if I need to cancel?</h3>
+            <h3>What is the cancellation policy?</h3>
+            <ul class="clean-list">
+              <li>More than 24 hours before your booking: no cancellation fee</li>
+              <li>Less than 24 hours before your booking: 20% cancellation fee</li>
+              <li>Within 2 hours of your booking: 50% cancellation fee</li>
+              <li>No-show: 100% charge</li>
+            </ul>
+          </div>
+
+          <div class="card faq-item">
+            <h3>What happens if no helper is found?</h3>
             <p>
-              If your plans change, please contact us as soon as possible. Cancellation handling for
-              the early trial will be confirmed during the booking process.
+              If no helper is found after continued efforts, Local Buddy may contact you after about
+              2 hours to offer an alternative time or ask whether you still want help.
             </p>
           </div>
         </div>
 
-        <h2>Boundaries and safety</h2>
+        <h2>Timing, lateness, and live issues</h2>
 
         <div class="faq-list">
           <div class="card faq-item">
-            <h3>Can the helper make phone calls for me?</h3>
+            <h3>What happens if my helper is late?</h3>
             <p>
-              A helper may assist with phone calls during the in-person session if needed. However,
-              the helper is there to support communication and practical understanding, not to act
-              independently on your behalf outside the agreed session.
+              If your helper arrives within 15 minutes, the session starts when the helper arrives
+              and the session time shifts forward.
+            </p>
+            <p>
+              If your helper is more than 15 minutes late, please contact Local Buddy immediately.
+              The booking is treated as a helper no-show.
             </p>
           </div>
 
           <div class="card faq-item">
-            <h3>Can the helper sign documents for me or make decisions for me?</h3>
+            <h3>What happens if I am late?</h3>
+            <p>Your helper will wait up to 15 minutes.</p>
+            <p>
+              If your helper is on time and has checked in correctly, the timer still starts at the
+              booked time. The session does not get extended because you were late.
+            </p>
+            <p>
+              If you have not checked in within 15 minutes of the scheduled booking time, you may
+              be treated as a no-show.
+            </p>
+          </div>
+
+          <div class="card faq-item">
+            <h3>What should I do if something goes wrong?</h3>
+            <p>
+              If something goes wrong, you can submit a complaint through the complaint form. Local
+              Buddy aims to respond within 1 hour during operating hours, and the first response
+              will acknowledge the issue and explain the next step.
+            </p>
+          </div>
+        </div>
+
+        <h2>Important boundaries</h2>
+
+        <div class="faq-list">
+          <div class="card faq-item">
+            <h3>Can the helper make decisions for me?</h3>
+            <p>No. Helpers assist. Customers decide.</p>
+            <p>
+              You remain responsible for your own decisions, documents, payments, and actions.
+            </p>
+          </div>
+
+          <div class="card faq-item">
+            <h3>Can the helper handle money, sign documents, or represent me?</h3>
             <p>No.</p>
             <p>
-              Helpers cannot sign documents for clients, make decisions for clients, handle money on
-              behalf of clients, or represent clients in legal, medical, or official decision-making
-              situations.
+              Helpers do not handle your money, make payments for you, sign documents for you, or
+              represent you in disputes, legal matters, or emergencies.
             </p>
           </div>
 
           <div class="card faq-item">
-            <h3>Can the helper come with me to a bank, hospital, or government office?</h3>
+            <h3>Is Local Buddy an emergency service?</h3>
+            <p>No. Local Buddy is not an emergency service.</p>
             <p>
-              Sometimes, yes — if the task fits within the service boundaries. Each request is
-              reviewed manually.
+              It must not be used for police situations, accidents, medical emergencies, or
+              dangerous urgent situations.
             </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>Can I request a male or female helper?</h3>
-            <p>
-              You can state a preference in the booking form. We will try to take that into account
-              where possible, but we cannot guarantee every preference in every case.
-            </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>Are helpers professional translators?</h3>
-            <p>
-              Not necessarily. This service is designed for everyday practical support and bilingual
-              help in real-world situations.
-            </p>
-          </div>
-        </div>
-
-        <h2>For helpers</h2>
-
-        <div class="faq-list">
-          <div class="card faq-item">
-            <h3>How are helpers chosen?</h3>
-            <p>
-              During this early trial, helper applications are reviewed manually. We look for people
-              who can communicate well, behave professionally, and handle everyday practical
-              situations responsibly.
-            </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>How do I apply to become a helper?</h3>
-            <p>
-              You can apply through the helper registration form on the website. Shortlisted
-              applicants will be invited to a short video call.
-            </p>
-          </div>
-
-          <div class="card faq-item">
-            <h3>How much do helpers get paid?</h3>
-            <p>For the current trial, helpers are paid <strong>NT$250 per hour</strong> for completed bookings.</p>
-            <p>If a session is extended by agreement, additional time is paid proportionally.</p>
           </div>
         </div>
 
         <div class="button-row top-gap">
-          <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSczX13lvi_fi_mNbYmk_kjZ0qIz5eRAHKPhqf570fOopoNtvQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Book Help</a>
-          <a class="button button-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLScD_y712JlEHSBdzH6Q42t-NEilVuz0rLtrQstn3EwrImcq0w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Helper</a>
+          <a class="button" href="book.html">Book a Buddy</a>
+          <a class="button button-secondary" href="helper.html">Become a Helper</a>
         </div>
       </div>
     </main>
