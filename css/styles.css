@@ -1,3 +1,6 @@
+/*
+  Theme variables, these are the main colors, spacing, and sizing values used below.
+*/
 :root {
   --bg: #ffffff;
   --surface: #ffffff;
@@ -16,14 +19,17 @@
   --container: 1100px;
 }
 
+/* Make width calculations behave predictably. */
 * {
   box-sizing: border-box;
 }
 
+/* Smooth scrolling for anchor links. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Base page styling. */
 body {
   margin: 0;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
@@ -32,58 +38,71 @@ body {
   background: var(--bg);
 }
 
+/* Default link style. */
 a {
   color: var(--primary);
   text-decoration: none;
 }
 
+/* Underline links on hover. */
 a:hover {
   text-decoration: underline;
 }
 
+/* Images never overflow their container. */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* Main page width wrapper. rem = root element, em = element */
 .container {
   width: min(100% - 2rem, var(--container));
   margin: 0 auto;
 }
 
+/* Narrower wrapper for text-heavy pages. */
 .narrow {
   width: min(100% - 2rem, 760px);
   margin: 0 auto;
 }
 
+/* Center text inside a section. */
 .center {
   text-align: center;
 }
 
+/* Force text to align left. */
 .text-left {
   text-align: left;
 }
 
+/* Standard vertical spacing for a page section. */
 .section {
   padding: 4rem 0;
 }
 
+/* Extra bottom spacing for the intro area on the home page. */
 .intro-section {
   padding-bottom: 1.5rem;
 }
 
+/* Small top spacing for the audience blurb. */
 .audience-section {
   padding-top: 0.5rem;
 }
 
+/* Alternate section background, used to visually separate blocks. */
 .section-alt {
   background: var(--surface-alt);
 }
 
+/* Tiny spacing helper used when two blocks need a bit of breathing room. */
 .top-gap {
   margin-top: 1rem;
 }
 
+/* Default header style. */
 .site-header {
   position: absolute;
   top: 0;
@@ -95,6 +114,20 @@ img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+/* Fully transparent header, used on inner pages. */
+.site-header--transparent {
+  position: static;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+/* Keep the inner pages from sitting too close to the top after the header becomes normal flow. */
+.section:first-of-type {
+  padding-top: 2rem;
+}
+
+/* Shared flex layout for the header and footer rows. */
 .header-inner,
 .footer-inner {
   display: flex;
@@ -105,6 +138,7 @@ img {
   flex-wrap: nowrap;
 }
 
+/* Logo + brand link in the header. */
 .brand {
   display: inline-flex;
   align-items: center;
@@ -114,6 +148,7 @@ img {
   flex-shrink: 0;
 }
 
+/* Logo image size in header and footer. */
 .brand img,
 .footer-brand img {
   width: 120px;
@@ -121,6 +156,7 @@ img {
   border-radius: 14px;
 }
 
+/* Horizontal link groups used in the header, footer, and button rows. */
 .nav,
 .footer-links,
 .button-row {
@@ -130,29 +166,47 @@ img {
   flex-wrap: nowrap;
 }
 
+/* Center button groups when needed. */
+.button-row.center {
+  justify-content: center;
+}
+
+/* Center a single button on a page. */
+.button-center {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 0;
+}
+
+/* Push the nav links to the far right. */
 .nav {
   margin-left: auto;
 }
 
+/* Header link appearance. */
 .nav a {
   color: #000000;
   font-weight: 600;
   white-space: nowrap;
 }
 
+/* Generic CSS grid helper. */
 .grid {
   display: grid;
   gap: 1.5rem;
 }
 
+/* Two equal columns. */
 .two-up {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Three equal columns, used for the steps section. */
 .steps {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* Split layout with two side-by-side panels. */
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -160,6 +214,7 @@ img {
   align-items: center;
 }
 
+/* Generic box with border, padding, and shadow. */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -168,10 +223,12 @@ img {
   box-shadow: var(--shadow);
 }
 
+/* Extra spacing for the booking info card. */
 .info-card {
   margin: 1.5rem 0;
 }
 
+/* Small uppercase label. */
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -180,6 +237,7 @@ img {
   color: var(--primary);
 }
 
+/* Shared heading spacing. */
 h1,
 h2,
 h3 {
@@ -187,26 +245,36 @@ h3 {
   margin-top: 0;
 }
 
+/* Main page title. */
 h1 {
   font-size: clamp(1.5rem, 5vw, 2.0rem);
   margin-bottom: 1rem;
 }
 
+/* Section heading. */
 h2 {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin-bottom: 1rem;
 }
 
+/* Slightly larger introductory paragraph text. */
 .lead {
   font-size: 1.1rem;
   color: var(--muted);
 }
 
+/* Smaller helper note text. */
 .small-note {
   color: var(--muted);
   font-size: 0.95rem;
 }
 
+/* The highlighted title inside the booking box. */
+.booking-form-title {
+  color: var(--primary) !important;
+}
+
+/* Larger bold paragraph copy used for the audience line on the homepage. */
 .audience-copy {
   font-size: 1.2rem;
   font-weight: 700;
@@ -215,11 +283,13 @@ h2 {
   margin: 0 auto;
 }
 
+/* Simple list with no default spacing. */
 .clean-list {
   margin: 0;
   padding-left: 1.2rem;
 }
 
+/* Main dark button. */
 .button {
   display: inline-block;
   background: var(--accent);
@@ -230,34 +300,41 @@ h2 {
   border: 1px solid transparent;
 }
 
+/* Button hover state. */
 .button:hover {
   background: #222222;
   text-decoration: none;
 }
 
+/* Secondary outlined button. */
 .button-secondary {
   background: var(--secondary);
   color: var(--accent);
   border-color: var(--accent);
 }
 
+/* Secondary button hover state. */
 .button-secondary:hover {
   background: #f3f3f3;
 }
 
+/* Smaller button variant. */
 .button-small {
   padding: 0.6rem 1rem;
 }
 
+/* Larger button variant. */
 .button-large {
   padding: 1rem 1.6rem;
   font-size: 1rem;
 }
 
+/* Hidden helper for old step numbering. */
 .step-number {
   display: none;
 }
 
+/* Image used for the numbered step circles. */
 .step-number-image {
   width: 70px;
   height: 70px;
@@ -265,11 +342,36 @@ h2 {
   margin: 0 auto 1rem;
 }
 
-.form-placeholder,
+/* Special card used on book.html. */
+.booking-form-card,
 .faq-item {
   margin: 1.5rem 0;
 }
 
+/* Booking form promo box: avocado background with white text. */
+.booking-form-card {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* Keep the text white inside the booking card. */
+.booking-form-card p {
+  color: #ffffff;
+}
+
+/* Make the booking card title white too. */
+.booking-form-card .booking-form-title {
+  color: #ffffff !important;
+}
+
+/* Center the button inside the booking card. */
+.booking-form-card .button {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 0;
+}
+
+/* Big hero image banner at the top of the home page. */
 .hero-banner {
   min-height: 78vh;
   padding-top: 5.5rem;
@@ -283,21 +385,25 @@ h2 {
   /* align-items: flex-start; */
 }
 
+/* Wrapper for anything placed over the hero image. */
 .hero-overlay {
   width: 100%;
 }
 
+/* Inner spacing for the hero area. */
 .hero-banner-inner {
   padding: 2rem 0;
 }
 
-/* HERO IMAGE NOTE: the banner artwork itself contains the logo, so there is no separate hero badge/logo block */
+/* The banner art already contains the logo, so nothing extra is drawn here. */
 
+/* Spacing for the call-to-action strip. */
 .cta-strip {
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
 
+/* Generic image panel used in split sections. */
 .image-panel {
   min-height: 380px;
   border-radius: 20px;
@@ -306,6 +412,7 @@ h2 {
   box-shadow: var(--shadow);
 }
 
+/* Left image panel on the intro section. */
 .image-panel-paperwork {
   background:
     linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
@@ -315,6 +422,7 @@ h2 {
   background-repeat: no-repeat;
 }
 
+/* Right image panel on the help section. */
 .image-panel-service {
   background:
     linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
@@ -328,69 +436,106 @@ h2 {
   background-repeat: no-repeat;
 }
 
+/* Text block beside an image panel. */
 .content-panel {
   padding: 1rem 0;
   min-width: 0;
 }
 
+/* White background section for the how-it-works block. */
 .how-section {
   background: #ffffff;
 }
 
+/* Centered text for each step card. */
 .step-card {
   text-align: center;
 }
 
+/* Green banner used to highlight the pilot area. */
 .pilot-area-banner {
   background: var(--primary);
   color: #ffffff;
   padding: 1.15rem 0;
 }
 
+/* Remove default paragraph spacing inside the pilot banner. */
 .pilot-area-banner p {
   margin: 0;
   font-size: 1.3rem;
 }
 
+/* White help section. */
 .help-section {
   background: #ffffff;
 }
 
+/* Alternate pale background section. */
 .limits-section {
   background: var(--surface-alt);
 }
 
+/* Green final call-to-action section. */
 .cta-section {
   background: var(--primary);
   color: #ffffff;
 }
 
+/* Keep CTA heading and text white. */
 .cta-section h2,
 .cta-section p {
   color: #ffffff;
 }
 
+/* Footer container. */
 .site-footer {
   border-top: 1px solid var(--border);
   background: var(--surface);
 }
 
+/* Footer logo + brand area. */
 .footer-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   font-weight: 700;
 }
 
+/* Remove default spacing from any footer brand text. */
 .footer-brand p {
   margin: 0;
 }
 
+/* Small-screen layout tweaks. */
 @media (max-width: 900px) {
-  .two-up,
-  .footer-inner {
+  .two-up {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  /* Footer: keep logo left and links right even on smaller screens. */
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  /* Prevent the logo block from forcing the links to wrap under it. */
+  .footer-brand {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  /* Keep the link group pinned to the right for as long as possible. */
+  .footer-links {
+    flex: 0 0 auto;
+    margin-left: auto;
+    justify-content: flex-end;
+    text-align: right;
+    white-space: nowrap;
+    flex-wrap: nowrap;
   }
 
   .header-inner {
@@ -404,7 +549,7 @@ h2 {
   .nav,
   .footer-links,
   .button-row {
-    gap: 0.75rem;
+    gap: 0.6rem;
     flex-wrap: nowrap;
   }
 
