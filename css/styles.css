@@ -168,6 +168,7 @@ img {
 
 /* Center button groups when needed. */
 .button-row.center {
+  width: 100%;
   justify-content: center;
 }
 
@@ -346,6 +347,39 @@ h2 {
 .booking-form-card,
 .faq-item {
   margin: 1.5rem 0;
+}
+
+/* Four-step helper guide grid on the helper guide page. */
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Step card variant for the helper guide page. */
+.guide-step-card {
+  padding-top: 1.75rem;
+}
+
+/* Number circle for the helper guide steps. */
+.guide-step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+/* Keep translated note readable on green cards. */
+.guide-translation-note {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* Booking form promo box: avocado background with white text. */
@@ -588,7 +622,8 @@ h2 {
 }
 
 @media (max-width: 650px) {
-  .steps {
+  .steps,
+  .guide-steps {
     grid-template-columns: 1fr;
     display: grid;
   }
